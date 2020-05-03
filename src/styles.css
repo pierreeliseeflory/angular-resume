@@ -1,1 +1,254 @@
 /* You can add global styles to this file, and also import other style files */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+  body {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    display: none;
+  }
+
+  .monitor {
+    display: none;
+  }
+}
+
+.about-me {
+  margin: auto;
+}
+
+body {
+  padding-top: 5rem;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
+  color: #223464;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.75rem;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.container {
+  width: auto;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.title-article {
+  padding-left: 5%;
+  color: #223464;
+}
+
+article {
+  margin: 5%;
+}
+
+div {
+  text-align: justify;
+}
+
+.title {
+  line-height: 1.33;
+  font-weight: 300;
+  letter-spacing: -.5px;
+  font-size: 48px;
+}
+
+nav {
+  background-color: white;
+  font-size: 25px;
+}
+
+.lead {
+  padding: 0 10%;
+}
+
+.monitor {
+  background-image: url(assets/images/monitor.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  color: white;
+  padding: 100px;
+}
+
+  .monitor p {
+    text-align: center;
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 2.5s steps(30, end), blink-caret .5s;
+  }
+
+
+/* The typing effect */
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 300px;
+  }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: white
+  }
+}
+
+.list-group-item.active {
+  background-color: #223464;
+  border-color: #223464;
+}
+
+figure {
+  text-align: center;
+}
+
+
+@media(min-width: 1200px) {
+  .figure-caption {
+      font-size: 60%;
+  }
+}
+
+.row.vcentered {
+  display: flex;
+  align-items: center;
+}
+
+div.progress {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 5%;
+  text-align: center;
+}
+
+h3 {
+  margin: 5%;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .col-xl-offset-2 {
+    margin-left: 16%;
+  }
+}
+
+.experience {
+  background-color: rgb(211, 211, 211);
+  padding: 2%;
+}
+
+.parallax {
+  /* Full height */
+  /* height: 100%; */
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+
+@media(min-width: 1200px) {
+  .languages {
+    margin-top: 50px;
+  }
+}
+
+#bars {
+  margin-top: 5%;
+}
+
+.collapse-section {
+  color: #223464;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.form {
+  margin: 0% 20% 0% 20%;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+select {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form {
+  margin-top: 5%;
+}
+
+.toast {
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 1;
+  /* Add a z-index if needed */
+  left: 10%;
+  bottom: 30px;
+  max-width: 80%;
+  /* 30px from the bottom */
+}

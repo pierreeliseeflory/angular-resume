@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\header",
+    "\\src\\app\\home",
+    "\\src\\app\\home\\progress",
+    "\\src\\app\\toast",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\toast\\toast.component.html",
+  "PreviewInSolutionExplorer": false
+}

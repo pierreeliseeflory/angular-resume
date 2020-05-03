@@ -1,0 +1,13 @@
+.incorrect-input-msg {
+    font-size: 15px;
+    color: red;
+}
+
+.incorrect-input {
+    border-color: red;
+    border-width: 2px;
+}
+
+.thanks {
+    text-align: center;
+}

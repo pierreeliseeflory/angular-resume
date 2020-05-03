@@ -1,0 +1,23 @@
+<div class="starter-template">
+    <h1>{{translations.title}}</h1>
+</div>
+
+<div class="row">
+    <div *ngFor="let project of translations.myProjects; index as i; first as isFirst" class="card col-12 col-lg-6 col-xl-4 mb-5">
+        <img src="assets/images/{{project.site}}.jpg" class="card-img-top center mt-2 rounded" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <p class="card-text">{{project.description}}</p>
+        </div>
+        <a href="https://ensta.fr/" class="stretched-link" target="_blank"></a>
+        <div class="card-footer">
+            <small class="text-muted">{{project.date}}</small>
+        </div>
+    </div>
+</div>
+<div style="min-height: 200px;">
+    <div class="spinner-border text-secondary center mt-5" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <p style="text-align: center;">{{translations.creation}}</p>
+</div>

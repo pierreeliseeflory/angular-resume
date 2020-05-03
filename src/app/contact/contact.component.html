@@ -1,0 +1,52 @@
+<div class="starter-template">
+    <h1>{{translations.title}}</h1>
+    <p class="lead">{{translations.subtitle}}</p>
+</div>
+<div id="parallax" class="parallax" style="background-image: url('assets/images/contact.jpg');min-height: 300px;max-width: 90%;margin: auto;"></div>
+
+<section>
+    <form *ngIf="notSubmitted;else thanksBlock" #form="ngForm" (ngSubmit)="onSubmit(form)" class="form">
+        <div class="form-row ">
+            <div class="col-md-6 mb-3 ">
+                <label for="validationTooltip01 ">{{translations.firstname}}</label>
+                <input name="firstname" ngModel type="text" id="validationTooltip01" class="form-control shadow p-3 mb-5 bg-white rounded " value="" placeholder="{{translations.firstnameExample}} " required #firstname="ngModel">
+            </div>
+            <div class="col-md-6 mb-3 ">
+                <label for="validationTooltip02">{{translations.lastname}}</label>
+                <input name="lastname" ngModel type="text " id="validationTooltip02" class="form-control shadow p-3 mb-5 bg-white rounded " value=" " placeholder="{{translations.lastnameExample}} " required #lastname="ngModel">
+            </div>
+            <div class="form-group col-md-8 col-12 ">
+                <label for="exampleFormControlInput1">{{translations.mail}}</label>
+                <input name="email" ngModel email type="email " id="exampleFormControlInput1" class="form-control shadow p-3 bg-white rounded" [ngClass]="{'incorrect-input': email.invalid && email.dirty}" placeholder="{{translations.mailExample}}" required #email="ngModel">
+                <p *ngIf="email.invalid && email.dirty" class="incorrect-input-msg mb-5">{{translations.alertMail}}</p>
+                <p class="description ">{{translations.info}}</p>
+            </div>
+            <div class="col-md-4 col-12 ">
+                <label for="reason-form ">{{translations.reason}}</label>
+                <select name="reason" ngModel class="custom-select shadow mb-5 bg-white rounded " id="reason-form " required #reason="ngModel">
+                    <option selected disabled value="">{{translations.reasonSelect}}</option>
+                    <option value={{translations.reasonChoice1}}>{{translations.reasonChoice1}}</option>
+                    <option value={{translations.reasonChoice2}}>{{translations.reasonChoice2}}</option>
+                    <option value={{translations.reasonChoice3}}>{{translations.reasonChoice3}}</option>
+                    <option value={{translations.reasonChoice4}}>{{translations.reasonChoice4}}</option>
+                </select>
+            </div>
+            <div class="form-group col-12 ">
+                <label for="exampleFormControlTextarea1 ">{{translations.message}}</label>
+                <textarea name="message" ngModel class="form-control shadow p-3 mb-5 bg-white rounded " id="exampleFormControlTextarea1" rows="3" [ngClass]="{'incorrect-input': message.invalid && message.dirty}" placeholder="..." required #message="ngModel" minlength="10"
+                    maxlength="5000"></textarea>
+                <p *ngIf="message.invalid && message.dirty" class="incorrect-input-msg mb-5">{{translations.alertMessage}}</p>
+            </div>
+
+            <button *ngIf="firstname.valid && lastname.valid && email.valid && reason.valid && message.valid; else elseBlock" type="suse elsebmit" class="btn btn-outline-success shadow p-3 mb-5 bg-white rounded ">{{translations.submit}}</button>
+            <ng-template #elseBlock>
+                <div class="incorrect-input-msg">{{translations.alertForm}}</div>
+            </ng-template>
+        </div>
+    </form>
+    <ng-template #thanksBlock>
+        <div class="mb-5 mt-5 thanks">
+            {{translations.thanks}}
+        </div>
+    </ng-template>
+</section>
